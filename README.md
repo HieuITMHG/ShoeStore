@@ -9,10 +9,10 @@
 * Login, Logout, Sign up.
 * Change password, info.
 * Forget password (optional)
-* **Admin**
+**Admin**
 * CRUD Shoe.
 * CRUD User.
-* **User**
+**User**
 * Search, filter, sort shoe.
 * View Shoe info.
 * Add or remove shoe to/from cart.
