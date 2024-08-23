@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/Transaction.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Enums/BranchType.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Views/Home.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/CartItem.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/Order.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/OrderItem.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/Account.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Enums/CategoryType.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/BaseEntity.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Enums/RoleType.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Util/UserSession.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Util/DBConnection.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Controllers/AccountController.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Enums/TransactionType.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Enums/SexType.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Views/LoginFrame.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Helpers/Helpers.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/shoestore/ShoeStore.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/static/Image/ShoeLogin.png</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/Cart.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/Models/Shoe.java</file>
+            <file>file:/C:/Hieu/Project/ShoeStore/src/DAO/AccountDAO.java</file>
+        </group>
+    </open-files>
+</project-private>
