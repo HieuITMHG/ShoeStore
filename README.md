@@ -19,4 +19,4 @@
 * Buy items from cart or buy directly from main page.
 * View order.
 * Balance manage, view transaction.
-* Comment product (optional).
+* Comment product.
