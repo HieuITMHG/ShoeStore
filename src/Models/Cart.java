@@ -8,7 +8,30 @@ package Models;
  *
  * @author HUU HIEU
  */
-public class Cart {
+public class Cart extends BaseEntity{
     private int CardID;
     private int AccountID;
+
+    public Cart(int CardID, int AccountID) {
+        this.CardID = CardID;
+        this.AccountID = AccountID;
+    }
+    
+    public int getCardID() {
+        return CardID;
+    }
+
+    public int getAccountID() {
+        return AccountID;
+    }
+
+    public void setCardID(int CardID) {
+        this.CardID = CardID;
+    }
+
+    public void setAccountID(int AccountID) {
+        this.AccountID = AccountID;
+    }
+    
+    
 }

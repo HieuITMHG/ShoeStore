@@ -8,7 +8,8 @@ package Enums;
  *
  * @author HUU HIEU
  */
-public enum RoleType {
-    USER,
-    ADMIN;
+public enum StatusType {
+    Prepare,
+    Delivering,
+    Finish,
 }

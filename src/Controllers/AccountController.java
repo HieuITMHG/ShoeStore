@@ -10,11 +10,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AccountController {
-    private LoginFrame loginFrame;
+    private LoginFrame loginFrame = new LoginFrame();
     private Home home;
 
-    public AccountController(LoginFrame loginFrame) {
-        this.loginFrame = loginFrame;
+    public AccountController() {
         loginFrame.addLoginButtonListener(new LoginButtonListener());
         loginFrame.setVisible(true);
     }
@@ -30,12 +29,11 @@ public class AccountController {
 
     public void login(String username, String password) {
         Account account = AccountDAO.getAccountByUsername(username);
-
         if (account != null) {
             if (password.equals(account.getPassword())) {
                 UserSession session = UserSession.getInstance(account);
                 JOptionPane.showMessageDialog(null, "Login successful!");
-
+                System.out.println(UserSession.getInstance(null).getUser().getUsername());
                 loginFrame.setVisible(false);
                 home = new Home();
                 home.setVisible(true);
