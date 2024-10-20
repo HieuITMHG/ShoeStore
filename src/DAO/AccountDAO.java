@@ -1,6 +1,8 @@
 package dao;
 
 import Models.Account;
+import Models.Admin;
+import Models.User;
 import Util.DBConnection;
 import Enums.RoleType;
 import Enums.SexType;
@@ -13,7 +15,7 @@ import java.sql.SQLException;
 public class AccountDAO {
     public static Account getAccountByUsername(String username) {
         Account account = null;
-        String query = "SELECT * FROM Account WHERE Username = ?";
+        String query = "SELECT * FROM account WHERE Username = ?";
         
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -24,18 +26,30 @@ public class AccountDAO {
             preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
             resultSet = preparedStatement.executeQuery();
-            
             if (resultSet.next()) {
-                account = new Account();
-                account.setAccountID(resultSet.getInt("AccountID"));
-                account.setUsername(resultSet.getString("Username"));
-                account.setPassword(resultSet.getString("Password"));
-                account.setFullname(resultSet.getString("Fullname"));
-                account.setSex(SexType.valueOf(resultSet.getString("Sex")));
-                account.setPhone(resultSet.getString("Phone"));
-                account.setEmail(resultSet.getString("Email"));
-                account.setAddress(resultSet.getString("Address"));
-                account.setRole(RoleType.valueOf(resultSet.getString("Role")));
+                String roleType = resultSet.getString("RoleType");
+                if (roleType.equals(RoleType.ADMIN.name())) {
+                    account = new Admin();
+                    account.setAccountID(resultSet.getInt("Id"));
+                    account.setUsername(resultSet.getString("Username"));
+                    account.setPassword(resultSet.getString("Password"));
+                    account.setRoletype(roleType);
+                } else if (roleType.equals(RoleType.USER.name())) {
+                    account = new User();
+                    account.setAccountID(resultSet.getInt("Id"));
+                    account.setUsername(resultSet.getString("Username"));
+                    account.setPassword(resultSet.getString("Password"));
+                    account.setRoletype(roleType);
+                    
+                    User userAccount = (User) account; 
+                    
+                    userAccount.setFullname(resultSet.getString("Fullname"));
+                    userAccount.setSexType(resultSet.getString("Sextype"));
+                    userAccount.setPhone(resultSet.getString("Phone"));
+                    userAccount.setEmail(resultSet.getString("Email"));
+                    userAccount.setAddress(resultSet.getString("Address"));
+                    userAccount.setBalance(resultSet.getDouble("Balance")); 
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
